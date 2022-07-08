@@ -1,4 +1,5 @@
 INTRODUCTION
+
 The objective of the study was to gather, clean and analyse over 5000+ tweets from a twitter account @dog_rates (WeRateDogs), draw some insights and make a visualization to communicate one of the insights drawn. WeRateDogs is a Twitter account that rates people's dogs with a humorous comment about the dog. The account was started in 2015 by college student Matt Nelson, and has received international media attention both for its popularity and notoreity.
 
 As always, the entire data wrangling process contains three major steps, namely:
@@ -9,6 +10,7 @@ As always, the entire data wrangling process contains three major steps, namely:
 Although, we did go beyond by both analysing the data and visualizing it with a plot. This was necessary as the data wrangling process isn't a stand alone process and for complete analysis, it must be combined with other processess to arrive at conclusions. I would be explaining in brief details the step-by-step prodecure that was undergone in this wrangling process.
 
 DATA GATHERING
+
 In this phase, three datasets were indicated to be necesary for the analysis.
 
 One was provided beforehand (twitter_archive_enhanced.csv), and all that was needed to be done was to read it in as a CSV file into a dataframe using the pandas' read_csv function.
@@ -17,9 +19,11 @@ The third file was the most difficult to gather, partly because the concept was 
 This brought me to the end of the gathering process with the three files successfully read into three different dataframes.
 
 DATA ASSESSING
+
 For this phase, I had to look at the three datasets both visually and programmatically to be able to notice and assess any possible quality or tidiness issue in the datasets before cleaning them in the next phase. A couple of issues were noted and documented in preparation for the cleaning phase. As with most data set, there were two majoy types of issues with the dataset, tidiniess and quality issues. The documented assessment is given below.
 
 Quality issues
+
 - The rating numerator column was extracted and populated wrongly, as some ratings with decimals were not extracted correctly
 
 - The 'retweeted_status_id' column shows that there are 180 non-null rows, while the specification states that we only want original ratings with no retweets
@@ -41,6 +45,7 @@ Quality issues
 - The 'source' column is overpopulated with irrelevant information, making it difficult for us to tell the source. More than one variable is contained in one column where we need only the source without the link.
 
 Tidiness issues
+
 - The 'doggo', 'floofer', 'pupper' and 'puppo' columns should all be values instead of variables. The observations are recorded as variables instead of values.
 
 - The three datasets should be merged into one dataset as all the three datasets are part of the same observational unit.
@@ -48,6 +53,7 @@ Tidiness issues
 - After documenting the issues that were noted, I proceeded to cleaning the datasets in the next phase.
 
 DATA CLEANING
+
 Data cleaning basically involves tackling the quality and tidiness issues that were note in the previous phase - Data assessing. With the use of formulas, functions and loops, most of the issues were cleaned. As was required by Udacity, the entire datasets were not to be cleaned in it's entirety. Rather, a minimum of 8 quality issues and 2 tidiness issues were to be worked on.
 
 During the cleaning the datasets, I combined the three into one master dataset (twitter_archive_master.csv) and saved it in preparation for analysis and visualization.
